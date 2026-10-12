@@ -6,8 +6,12 @@
   --text: #17191d;
   --muted: #606773;
   --border: #dfe3ea;
-  --accent: #087cf0;
-  --accent-hover: #0069d5;
+  --link: #0069d5;
+  --link-hover: #0058b6;
+  --action-background: #0069d5;
+  --action-background-hover: #0058b6;
+  --action-foreground: #ffffff;
+  --focus-ring: #0058b6;
   --shadow: 0 18px 50px rgba(31, 42, 62, 0.08);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -23,8 +27,29 @@ body {
   line-height: 1.65;
 }
 
-a { color: var(--accent); }
-a:hover { color: var(--accent-hover); }
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  top: 12px;
+  left: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 700;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus { transform: translateY(0); }
 
 .site-header,
 main,
@@ -45,6 +70,7 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  min-height: 44px;
   color: var(--text);
   font-weight: 750;
   text-decoration: none;
@@ -53,24 +79,26 @@ footer {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 38px;
   height: 38px;
   border-radius: 12px;
-  background: var(--accent);
-  color: white;
-  font-size: 13px;
-  letter-spacing: -0.02em;
 }
 
 nav { display: flex; gap: 22px; }
-nav a { color: var(--muted); font-weight: 650; text-decoration: none; }
+nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--muted);
+  font-weight: 650;
+  text-decoration: none;
+}
 nav a[aria-current="page"] { color: var(--text); }
 
 .hero { padding: 112px 0 82px; max-width: 820px; }
 .eyebrow {
-  color: var(--accent);
+  color: var(--link);
   font-size: 14px;
   font-weight: 750;
   letter-spacing: 0.08em;
@@ -91,8 +119,8 @@ p { margin: 0 0 18px; }
   font-weight: 700;
   text-decoration: none;
 }
-.button.primary { background: var(--accent); color: white; }
-.button.primary:hover { background: var(--accent-hover); color: white; }
+.button.primary { background: var(--action-background); color: var(--action-foreground); }
+.button.primary:hover { background: var(--action-background-hover); color: var(--action-foreground); }
 .button.secondary { background: var(--surface-muted); color: var(--text); }
 
 .feature-grid {
@@ -141,7 +169,14 @@ footer {
   font-size: 14px;
 }
 footer div { display: flex; gap: 18px; }
-footer a { color: var(--muted); }
+footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--muted);
+}
+
+.email-address { overflow-wrap: anywhere; }
 
 @media (max-width: 720px) {
   .site-header { align-items: flex-start; gap: 12px; }
@@ -153,6 +188,10 @@ footer a { color: var(--muted); }
   footer { flex-direction: column; gap: 4px; }
 }
 
+@media (max-width: 340px) {
+  .brand-name { display: none; }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #111318;
@@ -161,8 +200,12 @@ footer a { color: var(--muted); }
     --text: #f4f6fa;
     --muted: #aeb5c1;
     --border: #303641;
-    --accent: #4aa3ff;
-    --accent-hover: #79bbff;
+    --link: #69b4ff;
+    --link-hover: #8bc5ff;
+    --action-background: #69b4ff;
+    --action-background-hover: #8bc5ff;
+    --action-foreground: #111318;
+    --focus-ring: #8bc5ff;
     --shadow: none;
   }
 }

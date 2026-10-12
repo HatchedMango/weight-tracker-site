@@ -4,14 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Help and contact information for the Weight Tracker iPhone app.">
+  <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Support — Weight Tracker">
+  <meta property="og:description" content="Help, frequently asked questions, and contact information for Weight Tracker.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hatchedmango.github.io/weight-tracker-site/support.html">
+  <meta property="og:image" content="https://hatchedmango.github.io/weight-tracker-site/assets/app-icon.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary">
   <title>Support — Weight Tracker</title>
+  <link rel="canonical" href="https://hatchedmango.github.io/weight-tracker-site/support.html">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Weight Tracker home">
-      <span class="brand-mark" aria-hidden="true">WT</span>
-      <span>Weight Tracker</span>
+      <img class="brand-mark" src="assets/favicon.png" width="38" height="38" alt="">
+      <span class="brand-name">Weight Tracker</span>
     </a>
     <nav aria-label="Primary navigation">
       <a href="privacy.html">Privacy</a>
@@ -19,7 +33,7 @@
     </nav>
   </header>
 
-  <main class="document">
+  <main class="document" id="main-content">
     <p class="eyebrow">Help &amp; contact</p>
     <h1>Weight Tracker Support</h1>
     <p class="lede">Need help, found a problem, or have an idea? Send an email and include the iPhone model and iOS version when they may be relevant.</p>
@@ -30,17 +44,22 @@
 
       <details>
         <summary>Where is my weight data stored?</summary>
-        <p>Your entries and target are stored locally on your iPhone. Weight Tracker does not require an account or upload your weight history to the developer.</p>
+        <p>Your weight history, targets, progress phases, and app settings are stored locally on your iPhone. Weight Tracker does not require an account or send your weight data to the developer.</p>
       </details>
 
       <details>
         <summary>How do I back up or move my entries?</summary>
-        <p>Open History and use Export CSV to save a copy. Use Import CSV to bring compatible entries back into Weight Tracker.</p>
+        <p>In History, choose Export Weight History to save your weigh-ins as a CSV file. The CSV contains dates and weights only; targets, progress phases, and app settings are not included. Import Weight History can add compatible weigh-ins later. Dates already in the app and duplicate dates in the file are skipped.</p>
+      </details>
+
+      <details>
+        <summary>How do I delete my data?</summary>
+        <p>You can delete individual weigh-ins from History. To remove the app’s locally stored data, delete Weight Tracker rather than merely removing it from the Home Screen or offloading it. Exported CSV files and device backups must be managed separately.</p>
       </details>
 
       <details>
         <summary>Why didn’t I receive a reminder?</summary>
-        <p>Open the app’s reminder settings and confirm the reminder is enabled. Also check iPhone Settings &gt; Notifications &gt; Weight Tracker to make sure notifications are allowed.</p>
+        <p>In Weight Tracker, open Weigh-In Reminder and confirm that it is enabled. Then open iPhone Settings and verify that notifications are allowed for Weight Tracker.</p>
       </details>
 
       <details>
@@ -51,7 +70,7 @@
 
     <section class="contact-card">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:weighttrackerapp.support@gmail.com">weighttrackerapp.support@gmail.com</a></p>
+      <p>Email: <a class="email-address" href="mailto:weighttrackerapp.support@gmail.com">weighttrackerapp.support@gmail.com</a></p>
       <p>For privacy questions, please review the <a href="privacy.html">privacy policy</a>.</p>
     </section>
   </main>

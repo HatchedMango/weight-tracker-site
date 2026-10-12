@@ -3,15 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Privacy and support information for the Weight Tracker iPhone app.">
+  <meta name="description" content="Simple, private weight tracking for iPhone, plus privacy and support information.">
+  <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Weight Tracker">
+  <meta property="og:description" content="Simple, private weight tracking for iPhone—without an account.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hatchedmango.github.io/weight-tracker-site/">
+  <meta property="og:image" content="https://hatchedmango.github.io/weight-tracker-site/assets/app-icon.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary">
   <title>Weight Tracker</title>
+  <link rel="canonical" href="https://hatchedmango.github.io/weight-tracker-site/">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Weight Tracker home">
-      <span class="brand-mark" aria-hidden="true">WT</span>
-      <span>Weight Tracker</span>
+      <img class="brand-mark" src="assets/favicon.png" width="38" height="38" alt="">
+      <span class="brand-name">Weight Tracker</span>
     </a>
     <nav aria-label="Primary navigation">
       <a href="privacy.html">Privacy</a>
@@ -19,11 +33,11 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero">
       <p class="eyebrow">Private by design</p>
       <h1>Simple weight tracking, without an account.</h1>
-      <p class="lede">Weight Tracker helps you follow trends and progress while keeping your weight history on your iPhone.</p>
+      <p class="lede">Weight Tracker helps you see longer-term trends and progress toward an optional target while keeping your weight history on your iPhone.</p>
       <div class="actions">
         <a class="button primary" href="support.html">Get support</a>
         <a class="button secondary" href="privacy.html">Read the privacy policy</a>
@@ -32,16 +46,16 @@
 
     <section class="feature-grid" aria-label="App principles">
       <article class="card">
-        <h2>Stored on your device</h2>
-        <p>Your entries, target, and preferences are stored locally. Weight Tracker does not require an account.</p>
+        <h2>Stored locally</h2>
+        <p>Your weight history, optional target, and preferences are stored on your device. Weight Tracker does not require an account.</p>
       </article>
       <article class="card">
-        <h2>No tracking</h2>
-        <p>The app does not include advertising, third-party analytics, or cross-app tracking.</p>
+        <h2>No ads or analytics</h2>
+        <p>The app contains no advertising, third-party analytics, or cross-app tracking.</p>
       </article>
       <article class="card">
-        <h2>Your data stays portable</h2>
-        <p>You can export your entries as a CSV file and import them again when you choose.</p>
+        <h2>Your weight history stays portable</h2>
+        <p>Export your weigh-ins as a CSV file and import compatible entries later.</p>
       </article>
     </section>
   </main>
